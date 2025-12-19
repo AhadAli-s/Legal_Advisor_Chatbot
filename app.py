@@ -68,7 +68,6 @@ def query_groq(message, chat_history, legal_topic="General", response_length="Me
     if chat_history:
         for entry in chat_history:
             if isinstance(entry, dict):
-                # Already in correct format
                 messages.append(entry)
     
     # Add current message
@@ -118,14 +117,12 @@ with gr.Blocks(title="Legal Advisor Chatbot - LexBot") as demo:
     with gr.Row():
         # Left Column - Chat Interface
         with gr.Column(scale=2):
-            # Use the new Gradio 5.x format
             chatbot = gr.Chatbot(
                 label="",
                 height=600,
                 show_label=False
             )
             
-            # Input Section
             with gr.Row():
                 msg = gr.Textbox(
                     label="",
@@ -209,7 +206,6 @@ with gr.Blocks(title="Legal Advisor Chatbot - LexBot") as demo:
     # State management
     state = gr.State([])
     
-    # Event handlers - CORRECT FORMAT for Gradio 5.x
     def respond_wrapper(message, history, topic, length, temp):
         """Wrapper to handle response and update both chatbot and state"""
         if not message or not message.strip():
@@ -248,6 +244,5 @@ with gr.Blocks(title="Legal Advisor Chatbot - LexBot") as demo:
         outputs=[chatbot, state]
     )
 
-# Launch the app
 if __name__ == "__main__":
     demo.launch(share=True)
