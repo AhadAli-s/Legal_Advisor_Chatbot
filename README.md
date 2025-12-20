@@ -4,7 +4,7 @@ emoji: ⚖️
 colorFrom: blue
 colorTo: purple
 sdk: gradio
-sdk_version: 4.0.0
+sdk_version: 6.1.0
 app_file: app.py
 pinned: false
 license: mit
@@ -16,7 +16,7 @@ A professional AI-powered legal advisor chatbot built with Gradio and powered by
 
 ## 🎯 Features
 
-- **Multi-Domain Legal Expertise**: Covers Contract Law, Employment Law, Property Law, Criminal Law, Family Law, Intellectual Property, Tort Law, and Business Law
+- **Multi-Domain Legal Expertise**: Covers Contract Law, Employment Law, Property Law, Criminal Law, Family Law, Intellectual Property, Tort Law, Business Law, and Civil Rights
 - **Customizable Responses**: 
   - Legal topic focus dropdown
   - Response length control (Brief/Medium/Detailed)
@@ -60,8 +60,8 @@ A professional AI-powered legal advisor chatbot built with Gradio and powered by
 
 ## 🛠️ Technical Details
 
-- **Framework**: Gradio 4.0+
-- **LLM**: GROQ API (Llama3-8b-8192)
+- **Framework**: Gradio 6.0+
+- **LLM**: GROQ API (llama-3.3-70b-versatile)
 - **Language**: Python 3.8+
 
 ## 📝 Customization
